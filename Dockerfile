@@ -12,6 +12,6 @@ RUN pip install validate_email
 RUN pip install scrapyd
 RUN pip install pyDNS
 RUN pip install shub
-RUN pip install BeautifulSoup
+RUN pip install beautifulsoup4
 
 CMD scrapy

@@ -5,7 +5,7 @@ from scrapy.linkextractors import LinkExtractor
 from customerScrapy.items import InfoGuiaEmpresaItem, InfoGuiaCategoriaItem
 import urlparse
 import re
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 class InfoguiaSpider(CrawlSpider):
     name = "infoguia"
@@ -87,7 +87,7 @@ class InfoguiaSpider(CrawlSpider):
 
         ids = []
         for parse in response.xpath('//a[@name]').extract():
-            l = BeautifulSoup(parse)
+            l = BeautifulSoup(parse, "lxml")
             ids.append(l.a['name'])
         CategoriaItem['empresas'] = ', '.join(ids)
 
