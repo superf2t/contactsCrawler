@@ -13,5 +13,6 @@ RUN pip install scrapyd
 RUN pip install pyDNS
 RUN pip install shub
 RUN pip install beautifulsoup4
+RUN pip install scrapyd-client
 
 CMD scrapy
