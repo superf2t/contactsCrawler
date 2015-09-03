@@ -28,6 +28,8 @@ class InfoguiaSpider(CrawlSpider):
         'CONCURRENT_REQUESTS': 32,
         'DOWNLOAD_DELAY': 2,
         'COOKIES_ENABLED': False,
+        'FEED_URI': 'infoguia.json',
+        'FEED_FORMAT': 'jsonlines',
     }
     start_urls = (
         'http://paginasamarillas.infoguia.net/',
