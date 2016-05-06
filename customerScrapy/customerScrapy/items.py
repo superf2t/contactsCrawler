@@ -7,6 +7,11 @@
 
 import scrapy
 
+class PaginasAmarillasDominicanaContacto(scrapy.Item):
+    nombre = scrapy.Field()
+    email = scrapy.Field()
+    website = scrapy.Field()
+    direccion = scrapy.Field()
 
 class InfoGuiaEmpresaItem(scrapy.Item):
     # define the fields for your item here like:
@@ -20,7 +25,7 @@ class InfoGuiaEmpresaItem(scrapy.Item):
     email = scrapy.Field()
     website = scrapy.Field()
     facebook = scrapy.Field()
-    twitter = scrapy.Field() 
+    twitter = scrapy.Field()
     instagram = scrapy.Field()
     webmini = scrapy.Field()
 
